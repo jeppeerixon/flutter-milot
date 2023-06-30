@@ -42,10 +42,6 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         body: _pages[_selectedIndex],
-        appBar: AppBar(
-          backgroundColor: Colors.pinkAccent,
-          title: const Text('Aktivitetshuset Milot'),
-          ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           type: BottomNavigationBarType.fixed,
