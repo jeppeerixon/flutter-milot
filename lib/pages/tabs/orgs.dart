@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/pages/clubCard.dart';
 
-class OrgScreen extends StatelessWidget {
-  OrgScreen({ Key? key }) :super(key: key);
+class ClubsAll extends StatelessWidget {
+  ClubsAll({ Key? key }) :super(key: key);
 
   final List _clubs = [
     // clubCategory, clubName, clubDescription, clubRoom, clubUrl
@@ -20,9 +20,6 @@ class OrgScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Föreningar'),
-        ),
       body: GridView.builder(
         padding: const EdgeInsets.all(10),
         itemCount: _clubs.length,

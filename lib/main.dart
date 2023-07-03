@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_1/pages/clubs.dart';
 import 'package:flutter_app_1/pages/contact.dart';
 import 'package:flutter_app_1/pages/home.dart';
 import 'package:flutter_app_1/pages/map.dart';
-import 'package:flutter_app_1/pages/orgs.dart';
+import 'package:flutter_app_1/pages/tabs/orgs.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _pages = [
     HomeScreen(),
     MapScreen(),
-    OrgScreen(),
+    ClubScreen(),
     ContactScreen(),
   ];
   
