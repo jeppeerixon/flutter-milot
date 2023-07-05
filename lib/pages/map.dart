@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class MapScreen extends StatelessWidget {
   const MapScreen({ Key? key }) :super(key: key);
@@ -24,80 +23,116 @@ class Gridden extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: StaggeredGrid.count(
-        axisDirection: AxisDirection.down,
-        crossAxisCount: 4,
-        mainAxisSpacing: 4,
-        crossAxisSpacing: 4,
-        children: [
-                  StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 0.75,
-                      child: InkWell(
-                        onTap: (){
-                          print('hej');
-                        },
-                        child: Container(
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          color: Colors.brown,
-                        ),
-                        ),
+        padding: const EdgeInsets.all(15.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Text('bruna'),
+                      decoration: BoxDecoration(
+                        color: Colors.brown[400],
+                        borderRadius: BorderRadius.circular(10)
                       ),
                     ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 2,
-                      child: Container(
-                        color: Colors.blueGrey,
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text('turkosa'),
+                      decoration: BoxDecoration(
+                        color: Colors.teal[300],
+                        borderRadius: BorderRadius.circular(10)
                       ),
                     ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 1,
-                      child: Container(
-                        color: Colors.teal,
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Text('blå'),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[200],
+                        borderRadius: BorderRadius.circular(10)
                       ),
                     ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 0.75,
-                      child: Container(
-                        color: Colors.blue,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Text('röda'),
+                      decoration: BoxDecoration(
+                        color: Colors.red[300],
+                        borderRadius: BorderRadius.circular(10)
                       ),
                     ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 4,
-                      child: Container(
-                        color: Colors.yellow,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Text('idrott'),
+                      decoration: BoxDecoration(
+                        color: Colors.orange[300],
+                        borderRadius: BorderRadius.circular(10)
                       ),
                     ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 1.5,
-                      child: Container(
-                        color: Colors.red,
-                      ),
-                    ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 3,
-                      child: Container(
-                        color: Colors.orange,
-                      ),
-                    ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 1,
-                      child: Container(
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
+                  ),
+                ],
               ),
-      ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      child: Text('blåsvart'),
+                      decoration: BoxDecoration(
+                        color: Colors.black54,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Text('grön'),
+                      decoration: BoxDecoration(
+                        color: Colors.green[200],
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      child: Text('parkour'),
+                      decoration: BoxDecoration(
+                        color: Colors.amber[200],
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Text('väntrum'),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      )
     );
   }
 }
